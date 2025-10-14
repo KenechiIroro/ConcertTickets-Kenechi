@@ -36,6 +36,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uog.concerttickets.ui.theme.ConcertTicketsTheme
+import com.uog.concerttickets.ui.theme.TicketBlue
 import java.text.NumberFormat
 import java.util.*
 
@@ -47,10 +48,20 @@ object BandDataSource {
         Band("Written by Wolves", R.mipmap.written_by_wolves,24.95f),
         Band("Linkin Park", R.mipmap.linkin_park, 63.95f),
         Band("Man with a Mission", R.mipmap.man_with_a_mission, 36.00f),
-        Band("Hollywood Undead", R.mipmap.hollywood_undead,125.0f)
+        Band("Hollywood Undead", R.mipmap.hollywood_undead,125.0f),
+        Band("Electric Call Boy", R.mipmap.ecb ,125.0f),
+        Band("Self Deception", R.mipmap.self_deception ,125.0f),
     )
 }
 
+//TODO: add feature for venue selection,
+//TODO: add feature for ticket type [seating, stalls, standing, etc...]
+//TODO: add feature for DateTime picker
+//TODO: add feature tickets available - should be dynamic and reactive to the tickets purchased
+//TODO: add feature for timer - how long can the ticket be reserved before purchase is complete
+//TODO: add feature to send the ticket to customer - email, {first,last}name
+//TODO: add feature age restrictions some bands/venues do not allow under 14 year olds
+//TODO: Modularise the code, separate concerns; composables, data etc could be in own packages
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,7 +103,7 @@ fun ConcertTicketApp() {
                         Text(
                             text = "Concert Tickets",
                             fontWeight = FontWeight.Bold ,
-                            color = Color(0Xff1e2c41),
+                            color = TicketBlue,
                         )
                     }
                 },
