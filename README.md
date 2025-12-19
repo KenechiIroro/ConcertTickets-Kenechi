@@ -1,4 +1,4 @@
-CONCERT TICKETS 2.0 (Read me)
+CONCERT TICKETS 2.0 by Kenechi Iroro 001362581
 
 This version is Concert Tickets 2.0, the new lab app from the ELEE1146 Mobile Applications for Engineers module. The app provides an option to choose the artist, how many tickets to buy, and subtracts the price from the number of tickets. I’ve adapted the basic idea and made it work better – improved UI, pricing rules, Kotlin coroutines, and better MVVM-style structure.
 
